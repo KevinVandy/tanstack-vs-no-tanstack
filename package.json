@@ -1,0 +1,21 @@
+{
+  "name": "tanstack-vs-no-tanstack",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "no-query:dev": "turbo run dev --filter no-react-query-demo",
+    "query:dev": "turbo run dev --filter full-react-query-demo",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@7.15.0"
+}
