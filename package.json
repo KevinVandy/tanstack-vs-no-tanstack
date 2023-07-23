@@ -7,14 +7,13 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "no-query:dev": "turbo run dev --filter no-react-query-demo",
-    "query:dev": "turbo run dev --filter full-react-query-demo",
+    "react-without-tanstack:dev": "turbo run dev --filter react-without-tanstack",
+    "react-with-tanstack:dev": "turbo run dev --filter react-with-tanstack",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
     "eslint": "^8.45.0",
-    "prettier": "^3.0.0",
     "turbo": "latest"
   },
   "packageManager": "pnpm@7.15.0"
