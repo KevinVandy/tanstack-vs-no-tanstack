@@ -10,6 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-actions": "0.0.1-beta.107",
+    "@tanstack/react-loaders": "0.0.1-beta.109",
+    "@tanstack/react-query": "5.0.0-alpha.88",
+    "@tanstack/react-table": "^8.9.3",
+    "@tanstack/react-virtual": "3.0.0-beta.54",
+    "@tanstack/router": "0.0.1-beta.112",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

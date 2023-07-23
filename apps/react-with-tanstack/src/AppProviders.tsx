@@ -1,9 +1,13 @@
-import { type ReactNode } from 'react';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { RouterProvider } from "@tanstack/router";
+import { router } from "./AppRoutes";
 
-interface Props {
-  children: ReactNode;
-}
+const queryClient = new QueryClient()
 
-export const AppProviders = ({ children }: Props) => {
-  return children
+export const AppProviders = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  );
 };

@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useRouter } from "@tanstack/router";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -11,7 +11,11 @@ function classNames(...classes: string[]) {
 }
 
 export const TopNav = () => {
-  const { pathname } = useLocation();
+  const {
+    state: {
+      currentLocation: { pathname },
+    },
+  } = useRouter();
 
   return (
     <div className="bg-slate-800  px-2 sm:px-6 lg:px-8 w-full">
@@ -35,7 +39,7 @@ export const TopNav = () => {
                     pathname === item.href
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "rounded-md px-3 py-2 text-sm font-medium",
+                    "rounded-md px-3 py-2 text-sm font-medium"
                   )}
                   aria-current={pathname === item.href ? "page" : undefined}
                 >

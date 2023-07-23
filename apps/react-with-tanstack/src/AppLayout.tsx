@@ -1,9 +1,11 @@
-import { type ReactNode } from 'react';
+import { Outlet } from "@tanstack/router";
+import { TopNav } from "./components/navigation/TopNav";
 
-interface Props {
-  children: ReactNode;
-}
-
-export const AppLayout = ({ children }: Props) => {
-  return <>{children}</>;
+export const AppLayout = () => {
+  return (
+    <div className="flex-col">
+      <TopNav />
+      <Outlet />
+    </div>
+  );
 };
