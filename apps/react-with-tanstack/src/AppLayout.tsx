@@ -1,4 +1,4 @@
-import { Outlet } from "@tanstack/router";
+import { Outlet } from "@tanstack/react-router";
 import { TopNav } from "./components/navigation/TopNav";
 
 export const AppLayout = () => {

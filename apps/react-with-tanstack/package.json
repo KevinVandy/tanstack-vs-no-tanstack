@@ -4,36 +4,37 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 5002",
+    "dev": "vite --port 5004",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tanstack/react-actions": "0.0.1-beta.107",
-    "@tanstack/react-loaders": "0.0.1-beta.109",
-    "@tanstack/react-query": "5.0.0-alpha.88",
+    "@tanstack/react-actions": "0.0.1-beta.151",
+    "@tanstack/react-form": "0.0.11",
+    "@tanstack/react-loaders": "0.0.1-beta.151",
+    "@tanstack/react-query": "5.0.0-beta.18",
+    "@tanstack/react-router": "0.0.1-beta.151",
     "@tanstack/react-table": "^8.9.3",
     "@tanstack/react-virtual": "3.0.0-beta.54",
-    "@tanstack/router": "0.0.1-beta.112",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.15",
+    "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.1.0",
-    "@typescript-eslint/parser": "^6.1.0",
-    "@vitejs/plugin-react": "^4.0.3",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.45.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "@vitejs/plugin-react": "^4.0.4",
+    "autoprefixer": "^10.4.15",
+    "eslint": "^8.47.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "postcss": "^8.4.27",
-    "prettier": "^3.0.0",
-    "prettier-plugin-tailwindcss": "^0.4.1",
+    "postcss": "^8.4.28",
+    "prettier": "^3.0.2",
+    "prettier-plugin-tailwindcss": "^0.5.3",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6",
-    "vite": "^4.4.6"
+    "vite": "^4.4.9"
   }
 }

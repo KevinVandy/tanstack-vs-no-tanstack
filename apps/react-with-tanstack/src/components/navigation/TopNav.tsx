@@ -1,4 +1,4 @@
-import { Link, useRouter } from "@tanstack/router";
+import { Link, useRouter } from "@tanstack/react-router";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -13,7 +13,7 @@ function classNames(...classes: string[]) {
 export const TopNav = () => {
   const {
     state: {
-      currentLocation: { pathname },
+      location: { pathname },
     },
   } = useRouter();
 

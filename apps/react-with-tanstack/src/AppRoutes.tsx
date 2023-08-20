@@ -1,4 +1,4 @@
-import { Router, Route, RootRoute } from "@tanstack/router";
+import { Router, Route, RootRoute } from "@tanstack/react-router";
 import { AppLayout } from "./AppLayout";
 import { HomePage } from "./pages/HomePage";
 import { FeedPage } from "./pages/FeedPage";
@@ -53,7 +53,7 @@ export const router = new Router({
   defaultPreload: "intent",
 });
 
-declare module "@tanstack/router" {
+declare module "@tanstack/react-router" {
   interface Register {
     router: typeof router;
   }
