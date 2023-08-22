@@ -1,22 +1,15 @@
-import { Link, useRouter } from "@tanstack/react-router";
+import { Link, RegisteredRoutesInfo } from "@tanstack/react-router";
 
-const navigation = [
+const navigation: Array<{
+  href: RegisteredRoutesInfo["routePaths"];
+  name: string;
+}> = [
   { name: "Home", href: "/" },
   { name: "Feed", href: "/feed" },
   { name: "Users", href: "/users" },
 ];
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export const TopNav = () => {
-  const {
-    state: {
-      location: { pathname },
-    },
-  } = useRouter();
-
   return (
     <div className="bg-slate-800  px-2 sm:px-6 lg:px-8 w-full">
       <div className="relative flex h-16 items-center justify-between">
@@ -33,15 +26,18 @@ export const TopNav = () => {
             <div className="flex space-x-4">
               {navigation.map((item) => (
                 <Link
+                  className="rounded-md px-3 py-2 text-sm font-medium"
                   key={item.name}
                   to={item.href}
-                  className={classNames(
-                    pathname === item.href
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "rounded-md px-3 py-2 text-sm font-medium"
-                  )}
-                  aria-current={pathname === item.href ? "page" : undefined}
+                  activeProps={{
+                    "aria-current": true,
+                    className: "bg-gray-900 text-white",
+                  }}
+                  inactiveProps={{
+                    "aria-current": false,
+                    className:
+                      "text-gray-300 hover:bg-gray-700 hover:text-white",
+                  }}
                 >
                   {item.name}
                 </Link>
